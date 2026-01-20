@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saraswati Puja - Welcome</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Welcome overlay -->
+  <div id="welcome" class="overlay">
+    <div class="welcome-card">
+      <h1>Welcome</h1>
+      <p>Click Enter to join the Saraswati Puja</p>
+      <button id="enterBtn" class="enter-btn" aria-label="Enter site">Enter</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div id="main" class="hidden">
+    <!-- Background video -->
+    <video id="bgVideo" class="bg-video" autoplay muted loop playsinline>
+      <!-- Put your background video file at assets/saraswati-puja.mp4 or change the src -->
+      <source src="assets/saraswati-puja.mp4" type="video/mp4" />
+      <!-- Fallback image if video not available -->
+      <img src="assets/saraswati-fallback.jpg" alt="Saraswati Puja" />
+    </video>
+
+    <!-- Dark overlay to make text readable -->
+    <div class="dark-overlay"></div>
+
+    <!-- Center card showing countdown and message -->
+    <div class="center-card" role="main" aria-live="polite">
+      <div class="countdown" id="countdown">
+        <div class="time-row">
+          <div class="time-part"><span id="days">0</span><span class="label">Days</span></div>
+          <div class="time-part"><span id="hours">00</span><span class="label">Hours</span></div>
+          <div class="time-part"><span id="minutes">00</span><span class="label">Minutes</span></div>
+          <div class="time-part"><span id="seconds">00</span><span class="label">Seconds</span></div>
+        </div>
+        <div class="event-info">
+          <div id="eventDate">Event date: --</div>
+          <div id="eventTime">Event time: --</div>
+        </div>
+      </div>
+
+      <div id="greeting" class="greeting">Happy Saraswati Puja!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
