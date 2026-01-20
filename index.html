@@ -53,25 +53,15 @@
             color: white;
         }
 
-       .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      z-index: -1;
-    }
-
-    .video-bg iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.77vh;   /* 16:9 ratio */
-      height: 100vh;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
+      .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+             z-index: -1;
+}
 
         .overlay {
             width: 100%;
@@ -106,14 +96,13 @@
     <!-- Main Page -->
    <div id="main">
        
-<div class="video-bg">
-    <iframe
-      src="https://www.youtube.com/embed/tp49qA3BKWo?autoplay=1&mute=1&loop=1&playlist=tp49qA3BKWo&controls=0"
-      frameborder="0"
-      allow="autoplay"
-    ></iframe>
-  </div>
-       
+    <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="saraswati.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    
+       <!-- Content -->
         <div class="overlay">
             <h1>🌼 Happy Saraswati Puja 🌼</h1>
             <div id="countdown"></div>
@@ -149,6 +138,7 @@
 
 </body>
 </html>
+
 
 
 
